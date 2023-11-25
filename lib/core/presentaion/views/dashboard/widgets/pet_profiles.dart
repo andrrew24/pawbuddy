@@ -22,7 +22,11 @@ class PetProfiles extends StatelessWidget {
         loop: true,
         itemBuilder: (context, index) {
           return SwipeablePetCard(
-              cardColor: dashBoardPetColors[index], petModel: petList[index]);
+              onTap: () {
+                Navigator.pushNamed(context, '/aboutpet');
+              },
+              cardColor: dashBoardPetColors[index],
+              petModel: petList[index]);
         },
       ),
     );

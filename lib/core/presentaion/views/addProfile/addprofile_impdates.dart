@@ -81,23 +81,24 @@ class AddProfileImpDates extends StatelessWidget {
                 ],
               ),
             ),
-             const SizedBox(
+            const SizedBox(
               height: 16,
             ),
-             CustomTile(
-              onTap: () {
-                //openDate picker
-              },
+            CustomTile(
+                onTap: () {
+                  //openDate picker
+                },
                 imgPath: "assets/img/design/house.png",
                 title: "Adobtion",
                 subTitle: "6 jan 2020"),
-           
             const Spacer(),
             SizedBox(
                 width: double.infinity,
-                child: AppButton(title: "Continue", onPressed: () {
-                  Navigator.pushNamed(context, '/addprofilecaretakers');
-                })),
+                child: AppButton(
+                    title: "Continue",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/addprofilecaretakers');
+                    })),
             const SizedBox(
               height: 30,
             ),

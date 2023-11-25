@@ -26,7 +26,7 @@ class PawBuddy extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const AboutPet(),
+        '/': (context) => const Dashboard(),
         '/onBoard': (context) => const OnBoard(),
         '/login': (context) => const LoginScreen(),
         '/otp': (context) => const OtpScreen(),
@@ -35,6 +35,7 @@ class PawBuddy extends StatelessWidget {
         '/addprofileimpdates': (context) => const AddProfileImpDates(),
         '/addprofilecaretakers': (context) => const AddProfileCareTaker(),
         '/dashboard': (context) => const Dashboard(),
+        '/aboutpet': (context) => const AboutPet(),
         
       },
     );
