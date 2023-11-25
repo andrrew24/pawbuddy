@@ -8,6 +8,7 @@ import 'package:pawbuddy/core/presentaion/views/dashboard/dashboard_view.dart';
 import 'package:pawbuddy/core/presentaion/views/onBoarding/login_view/login_screen.dart';
 import 'package:pawbuddy/core/presentaion/views/onBoarding/login_view/on_board_view.dart';
 import 'package:pawbuddy/core/presentaion/views/onBoarding/login_view/otp_screen.dart';
+import 'package:pawbuddy/core/presentaion/views/profile/about_pet.dart';
 import 'package:pawbuddy/core/presentaion/views/splash_view/splach_view.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ class PawBuddy extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const SplashView(),
+        '/': (context) => const AboutPet(),
         '/onBoard': (context) => const OnBoard(),
         '/login': (context) => const LoginScreen(),
         '/otp': (context) => const OtpScreen(),
@@ -34,6 +35,7 @@ class PawBuddy extends StatelessWidget {
         '/addprofileimpdates': (context) => const AddProfileImpDates(),
         '/addprofilecaretakers': (context) => const AddProfileCareTaker(),
         '/dashboard': (context) => const Dashboard(),
+        
       },
     );
   }
