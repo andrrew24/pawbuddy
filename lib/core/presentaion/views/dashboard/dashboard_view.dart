@@ -7,6 +7,7 @@ import 'package:pawbuddy/core/presentaion/common_widgets/app_bg.dart';
 import 'package:pawbuddy/core/presentaion/views/addProfile/widgets/custom_tile.dart';
 import 'package:pawbuddy/core/presentaion/views/dashboard/widgets/categories.dart';
 import 'package:pawbuddy/core/presentaion/views/dashboard/widgets/dasboard_appbar.dart';
+import 'package:pawbuddy/core/presentaion/views/dashboard/widgets/drawer_button.dart';
 import 'package:pawbuddy/core/presentaion/views/dashboard/widgets/pet_profiles.dart';
 import 'package:gap/gap.dart';
 
@@ -59,21 +60,13 @@ class _DashboardState extends State<Dashboard> {
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Column(
                   children: [
-                    DrawerButton(
-                      text: "Dashboard",
-                      iconData: FontAwesomeIcons.chartLine,
-                    ),
-                    Gap(32),
-                    DrawerButton(
-                      text: "Contacts",
-                      iconData: FontAwesomeIcons.phone,
-                    ),
-                    Gap(32),
-                    DrawerButton(
-                      text: "Calendar",
-                      iconData: FontAwesomeIcons.calendar,
-                    ),
-                    Gap(32),
+                  MyDrawerButton(text: "Dashboard", iconData: FontAwesomeIcons.chartLine),
+                  Gap(32),
+                  MyDrawerButton(text: "Contacts", iconData: FontAwesomeIcons.phone),
+                  Gap(32),
+                  MyDrawerButton(text: "Calendar", iconData: FontAwesomeIcons.calendar
+                  ),
+                  Gap(32),
                   ],
                 ),
               ),
@@ -83,12 +76,12 @@ class _DashboardState extends State<Dashboard> {
                 padding: EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   children: [
-                    DrawerButton(
+                    MyDrawerButton(
                       iconData: FontAwesomeIcons.user,
                       text: "Account",
                     ),
                     Gap(32),
-                    DrawerButton(
+                    MyDrawerButton(
                       text: "Settings",
                       iconData: FontAwesomeIcons.gear,
                     )
@@ -143,31 +136,3 @@ class _DashboardState extends State<Dashboard> {
   }
 }
 
-class DrawerButton extends StatelessWidget {
-  const DrawerButton({
-    super.key,
-    required this.text,
-    required this.iconData,
-  });
-
-  final String text;
-  final IconData iconData;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          iconData,
-          color: Colors.white,
-          size: 15,
-        ),
-        const Gap(10),
-        Text(
-          text,
-          style: GoogleFonts.notoSans(fontSize: 16, color: Colors.white),
-        )
-      ],
-    );
-  }
-}

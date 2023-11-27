@@ -9,6 +9,7 @@ import 'package:pawbuddy/core/presentaion/views/onBoarding/login_view/login_scre
 import 'package:pawbuddy/core/presentaion/views/onBoarding/login_view/on_board_view.dart';
 import 'package:pawbuddy/core/presentaion/views/onBoarding/login_view/otp_screen.dart';
 import 'package:pawbuddy/core/presentaion/views/profile/about_pet.dart';
+import 'package:pawbuddy/core/presentaion/views/shareprofile/share_profile.dart';
 import 'package:pawbuddy/core/presentaion/views/splash_view/splach_view.dart';
 
 void main() async {
@@ -36,6 +37,7 @@ class PawBuddy extends StatelessWidget {
         '/addprofilecaretakers': (context) => const AddProfileCareTaker(),
         '/dashboard': (context) => const Dashboard(),
         '/aboutpet': (context) => const AboutPet(),
+        '/shareprofile': (context) => const ShareProfile(),
         
       },
     );

@@ -15,7 +15,9 @@ class Categories extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/shareprofile');
+              },
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 height: 170,
