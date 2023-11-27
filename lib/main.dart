@@ -26,7 +26,7 @@ class PawBuddy extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const Dashboard(),
+        '/': (context) => const SplashView(),
         '/onBoard': (context) => const OnBoard(),
         '/login': (context) => const LoginScreen(),
         '/otp': (context) => const OtpScreen(),

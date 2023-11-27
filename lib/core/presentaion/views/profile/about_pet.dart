@@ -107,6 +107,7 @@ class AboutPet extends StatelessWidget {
                       height: 16,
                     ),
                     CustomTile(
+                       tileColor: dogCardColor,
                       onTap: () {
                         //openDate picker
                       },
@@ -145,6 +146,7 @@ class AboutPet extends StatelessWidget {
                       height: 16,
                     ),
                     CustomTile(
+                       tileColor: dogCardColor,
                 onTap: () {
                   //openDate picker
                 },

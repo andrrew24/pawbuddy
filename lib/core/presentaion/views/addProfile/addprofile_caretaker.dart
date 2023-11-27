@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pawbuddy/core/constants/colors.dart';
 import 'package:pawbuddy/core/presentaion/common_widgets/app_bg.dart';
 import 'package:pawbuddy/core/presentaion/common_widgets/app_button.dart';
 import 'package:pawbuddy/core/presentaion/common_widgets/show_image.dart';
@@ -48,6 +49,7 @@ class AddProfileCareTaker extends StatelessWidget {
                 FontAwesomeIcons.minus,
                 color: Colors.white,
               ),
+              tileColor: dogCardColor,
             ),
             const SizedBox(height: 16),
             const CustomTile(
@@ -58,6 +60,7 @@ class AddProfileCareTaker extends StatelessWidget {
                 FontAwesomeIcons.minus,
                 color: Colors.white,
               ),
+               tileColor: dogCardColor,
             ),
             const Spacer(),
             SizedBox(

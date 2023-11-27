@@ -47,6 +47,7 @@ class AddProfileImpDates extends StatelessWidget {
               height: 40,
             ),
             CustomTile(
+              tileColor: dogCardColor,
               onTap: () {
                 //openDate picker
               },
@@ -85,6 +86,7 @@ class AddProfileImpDates extends StatelessWidget {
               height: 16,
             ),
             CustomTile(
+                tileColor: dogCardColor,
                 onTap: () {
                   //openDate picker
                 },

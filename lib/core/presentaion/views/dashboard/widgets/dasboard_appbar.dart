@@ -5,7 +5,9 @@ import 'package:pawbuddy/core/constants/colors.dart';
 import 'package:pawbuddy/core/presentaion/common_widgets/show_image.dart';
 
 class DashboardAppBar extends StatelessWidget {
-  const DashboardAppBar({super.key});
+  const DashboardAppBar({super.key, required this.onTap});
+
+  final void Function() onTap ;
 
   @override
   Widget build(BuildContext context) {
@@ -31,29 +33,32 @@ class DashboardAppBar extends StatelessWidget {
                     color: Colors.white,
                     fontWeight: FontWeight.w700),
               ),
-              trailing: const SizedBox(
+              trailing:  SizedBox(
                   height: 100,
                   width: 80,
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         FontAwesomeIcons.magnifyingGlass,
                         size: 15,
                         color: Colors.white,
                       ),
-                      SizedBox(width: 16),
-                      VerticalDivider(
+                      const SizedBox(width: 16),
+                      const VerticalDivider(
                         indent: 10,
                         endIndent: 10,
                         color: bordersColor,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 12,
                       ),
-                      Icon(
-                        FontAwesomeIcons.listUl,
-                        size: 15,
-                        color: Colors.white,
+                      GestureDetector(
+                        onTap: onTap ,
+                        child: const Icon(
+                          FontAwesomeIcons.listUl,
+                          size: 15,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   )),

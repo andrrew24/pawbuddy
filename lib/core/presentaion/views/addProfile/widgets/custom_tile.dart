@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pawbuddy/core/constants/colors.dart';
 import 'package:pawbuddy/core/presentaion/common_widgets/show_image.dart';
 
 class CustomTile extends StatelessWidget {
@@ -11,6 +10,7 @@ class CustomTile extends StatelessWidget {
     required this.subTitle,
     this.onTap,
     this.trailing,
+    required this.tileColor,
   });
 
   final String imgPath;
@@ -18,6 +18,7 @@ class CustomTile extends StatelessWidget {
   final String subTitle;
   final Widget? trailing;
   final void Function()? onTap;
+  final Color tileColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class CustomTile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: dogCardColor, borderRadius: BorderRadius.circular(14)),
+            color: tileColor, borderRadius: BorderRadius.circular(14)),
         child: ListTile(
           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
           leading: ShowImage(height: 50, width: 50, imgPath: imgPath),
